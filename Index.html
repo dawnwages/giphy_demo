@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Steven Universe Trivia Game">
+  <meta name="keywords" content="Steven Universe, Rebecca Sugar, Cartoon Network, Trivia, Game">
+  <meta name="author" content="Dawn Wages">
+  
+  <!-- Added link to the jQuery Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  
+   <!-- Added a link to Bootstrap-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Dosis|Source+Code+Pro" rel="stylesheet">
+
+  <!-- Added link to local style sheet -->
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    
+  <title> GIPHY | Gif Generator </title>
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="#">Start Bootstrap</a>
+
+          <div class="nav navbar navbar-right">
+            <span class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contact</a>
+              </li>
+            </span>
+          </div>
+        </div>
+      </nav>
+
+
+  <div class="container">
+    <h1> GIPHY | Gif Generator</h1>
+
+    <!--Gif will get dumped here -->
+    <div id="gif-view"></div>
+
+    <form id="gif-form">
+        <div class="row">
+          <label for="gif-input">Add a gif?</label>
+      </div>
+
+      <div class="row">
+      <input type="text" id="gif-input"><br>
+    </div>
+
+      <!-- Button triggers new movie to be added -->
+      <input id="add-gif" type="submit" value="Add a gif, darling">
+    </form>
+
+    <div class"container container-fluid">
+        <hr>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/javascript/gifpull.js"></script>
+  </div>
+</body>
+
+</html>
