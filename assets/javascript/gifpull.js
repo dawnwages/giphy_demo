@@ -2,14 +2,16 @@
 
 var gifList = ["Steven Universe", "Connie", "Crystal Gems", "Boy Bye", "Yass", "Queen"];
 var gifCounter = 0;
-var gifLimit = 20;
+var gifLimit = 10;
 //var searchGif;
 
 //adding click event listener for all search gif elements
 $(document).on("click", ".gifSearch", queryGif);
+$(document).on("click", ".giphy-img", imgState);
 //$(".gifSearch").on("click", demo);
 $("#addGifList").on("click", renderButtons);
 $("#add-gif").on("click", addGif);
+
 
 // This app's AUTH KEY from Giphy
 var authkey = "tVoRmgR6Tcy0u5LvEsRy4p5FIsXAmuJ3";
@@ -29,6 +31,20 @@ function renderButtons() {
     }
 
 renderButtons();
+
+function imgState() {
+    var state = $(this).attr("data-state");
+    console.log(state);
+
+    if (state === "still") {
+        $(this).attr("src", $(this).attr("data-animate"));
+        $(this).attr("data-state", "animate");
+      } else {
+        $(this).attr("src", $(this).attr("data-still"));
+        $(this).attr("data-state", "still");
+      }
+
+}
 
 function addGif() {
     event.preventDefault();
@@ -66,9 +82,13 @@ for (var i = 0; i < gifLimit; i++){
 
             
             gifCounter++;
-            var imageUrl = gifData.data.image_original_url;
+            var imageUrl = gifData.data.fixed_height_small_url;
+            var imageUrlStill = gifData.data.fixed_height_small_still_url;
 
             var gifImage = $("<img>");
+            gifImage.attr("data-state", "animate");
+            gifImage.attr("data-still",imageUrlStill);
+            gifImage.attr("data-animate",imageUrl);
             gifImage.attr("src", imageUrl);
             gifImage.attr("id", "gif" + gifCounter);
             gifImage.addClass("giphy-img");
