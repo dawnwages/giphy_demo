@@ -1,3 +1,17 @@
 #gif-input{
     width: 100%;
 }
+
+.giphy-img{
+    height: 300px;
+}
+
+.gifSearch {
+    font-size: 25px;
+    margin: 4px;
+}
+
+.navbar-right {
+    color: #fff;
+    margin: 15px;
+}

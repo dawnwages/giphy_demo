@@ -30,20 +30,12 @@
     <!-- Navigation -->
     <nav class="navbar navbar-inverse fixed-top">
         <div class="container">
-          <a class="navbar-brand" href="#">Start Bootstrap</a>
+          <a class="navbar-brand" href="#">Random Gif Generator</a>
 
           <div class="nav navbar navbar-right">
-            <span class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Services</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Contact</a>
-              </li>
-            </span>
+<ls><small> I've started you off with a pretty cool list. Click the buttons to search for the gif. Add more buttons if you'd like to crazy.</small>
+</ls>            
+</span>
           </div>
         </div>
       </nav>
@@ -55,6 +47,16 @@
     <!--Gif will get dumped here -->
     <div id="gif-view"></div>
 
+      <div id="gifList" class="container container-fluid">
+        <button class="gifSearch btn label label-default">
+          Money</button>
+          <button class="gifSearch btn label label-default">
+          Beyonce </button>
+        <button class="gifSearch btn label label-default">
+          Art</button>
+      </div>
+
+
     <form id="gif-form">
         <div class="row">
           <label for="gif-input">Add a gif?</label>
@@ -64,12 +66,16 @@
       <input type="text" id="gif-input"><br>
     </div>
 
-      <!-- Button triggers new movie to be added -->
+      <!-- Button triggers new gif to be added -->
       <input id="add-gif" type="submit" value="Add a gif, darling">
     </form>
 
-    <div class"container container-fluid">
+    <div class="container container-fluid">
         <hr>
+    </div>
+
+    <div id="gif-box" class="container container-fluid">
+
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
